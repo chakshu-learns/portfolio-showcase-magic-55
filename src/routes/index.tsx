@@ -262,18 +262,18 @@ function Index() {
 
       <footer id="contact" className="px-4 py-12 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-6xl overflow-hidden pop-lg rounded-3xl bg-background">
-          <div className="footer-grid relative flex h-80 items-center justify-center overflow-hidden bg-coral px-4">
-            <div className="footer-sticker absolute left-4 top-5 -rotate-12 pop rounded-xl bg-lime p-2 sm:p-3 text-lime-foreground sm:left-16 sm:top-16">
+          <div className="footer-grid relative flex min-h-72 items-center justify-center overflow-hidden bg-coral px-4 py-16 sm:h-80 sm:py-0">
+            <div className="footer-sticker absolute left-3 top-4 -rotate-12 pop rounded-xl bg-lime p-2 sm:p-3 text-lime-foreground sm:left-16 sm:top-16">
               <p className="border-b border-foreground pb-1 font-mono text-[10px] font-bold uppercase">Available</p>
-              <p className="text-base font-extrabold italic leading-none sm:text-xl">For new work</p>
+              <p className="text-sm font-extrabold italic leading-none sm:text-xl">For new work</p>
             </div>
 
-            <a href="mailto:parthsharma12898@gmail.com" className="group relative z-10 rounded-full border-[3px] border-foreground bg-lime px-6 py-4 text-center text-lime-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
-              <span className="block text-2xl font-extrabold italic leading-tight sm:text-5xl">Let’s work together</span>
-              <span className="mt-2 block break-all font-mono text-[10px] font-medium sm:text-xs">parthsharma12898@gmail.com · 8872286699</span>
+            <a href="mailto:parthsharma12898@gmail.com" className="group relative z-10 mt-10 rounded-full border-[3px] border-foreground bg-lime px-5 py-3 text-center text-lime-foreground shadow-[6px_6px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6 sm:shadow-[8px_8px_0_var(--foreground)]">
+              <span className="block whitespace-nowrap text-xl font-extrabold italic leading-tight sm:text-5xl">Let’s work together</span>
+              <span className="mt-2 block font-mono text-[9px] font-medium sm:text-xs">parthsharma12898@gmail.com · 8872286699</span>
             </a>
 
-            <div className="starburst footer-sticker absolute bottom-8 right-3 flex size-20 text-xs sm:text-sm rotate-12 items-center justify-center bg-foreground text-center font-mono font-bold uppercase text-lime sm:right-16 sm:top-14 sm:size-28">
+            <div className="starburst footer-sticker absolute bottom-3 right-2 flex size-16 rotate-12 items-center justify-center bg-foreground text-center font-mono text-[10px] font-bold uppercase text-lime sm:bottom-auto sm:right-16 sm:top-14 sm:size-28 sm:text-sm">
               Let’s<br />build!
             </div>
 
@@ -297,7 +297,7 @@ function Index() {
                   Let's connect<span className="text-coral">.</span>
                 </p>
               </div>
-              <div className="flex items-end justify-between gap-6 md:flex-col md:items-end">
+              <div className="flex flex-wrap items-end justify-between gap-4 md:flex-col md:items-end">
                 <div className="flex gap-3">
                   <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex size-12 items-center justify-center pop rounded-xl bg-background hover:bg-lime"><Linkedin className="size-5" /></a>
                   <a href="mailto:parthsharma12898@gmail.com" aria-label="Email Parth" className="flex size-12 items-center justify-center pop rounded-xl bg-background hover:bg-lime"><Mail className="size-5" /></a>
