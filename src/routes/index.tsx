@@ -132,11 +132,11 @@ function Index() {
           ))}
 
           <div className="relative z-10 max-w-3xl text-center">
-            <p className="mb-5 font-mono text-xs font-medium uppercase text-coral">Content • Community • Outreach</p>
+            <p className="mb-5 font-mono text-xs font-medium uppercase text-coral">Parth Sharma · Content & Community</p>
             <h1 className="text-[clamp(3rem,7vw,6.7rem)] font-extrabold leading-[1.08]">
-              <span className="block">Research.</span>
-              <span className="block">Shape.</span>
-              <span className="mt-3 block sm:mt-4"><span className="hero-highlight">Build with Parth.</span></span>
+              <span className="block">Content.</span>
+              <span className="block">Community.</span>
+              <span className="mt-3 block sm:mt-4"><span className="hero-highlight">Growth.</span></span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
               I help creators and growing teams turn ideas into clear content, active communities and consistent output.
