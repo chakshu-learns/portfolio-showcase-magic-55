@@ -184,6 +184,18 @@
   animation: drift 5s ease-in-out infinite;
 }
 
+@utility footer-grid {
+  background-image:
+    linear-gradient(var(--foreground) 2px, transparent 2px),
+    linear-gradient(90deg, var(--foreground) 2px, transparent 2px);
+  background-size: 110px 110px;
+  background-position: -2px -2px;
+}
+
+@utility starburst {
+  clip-path: polygon(50% 0%, 61% 12%, 77% 6%, 79% 22%, 95% 25%, 88% 40%, 100% 50%, 88% 60%, 95% 75%, 79% 78%, 77% 94%, 61% 88%, 50% 100%, 39% 88%, 23% 94%, 21% 78%, 5% 75%, 12% 60%, 0% 50%, 12% 40%, 5% 25%, 21% 22%, 23% 6%, 39% 12%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .ticker-track, .drift-mark { animation: none; }
