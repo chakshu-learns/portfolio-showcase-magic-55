@@ -20,6 +20,7 @@
 
 @theme inline {
   --font-sans: "Manrope", sans-serif;
+  --font-serif: "DM Serif Display", serif;
   --font-mono: "DM Mono", monospace;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -66,6 +67,8 @@
   --color-lime: var(--lime);
   --color-lime-foreground: var(--lime-foreground);
   --color-ink-soft: var(--ink-soft);
+  --color-blue: var(--blue);
+  --color-butter: var(--butter);
 }
 
 :root {
@@ -94,6 +97,8 @@
   --lime: oklch(0.88 0.2 121);
   --lime-foreground: oklch(0.145 0.018 43);
   --ink-soft: oklch(0.28 0.02 45);
+  --blue: oklch(0.52 0.22 259);
+  --butter: oklch(0.91 0.14 94);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -176,6 +181,15 @@
   50% { transform: rotate(2deg) translateY(-8px); }
 }
 
+@keyframes node-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes dash-flow {
+  to { background-position: 20px 0, 0 20px; }
+}
+
 @utility ticker-track {
   animation: ticker 28s linear infinite;
 }
@@ -196,7 +210,97 @@
   clip-path: polygon(50% 0%, 61% 12%, 77% 6%, 79% 22%, 95% 25%, 88% 40%, 100% 50%, 88% 60%, 95% 75%, 79% 78%, 77% 94%, 61% 88%, 50% 100%, 39% 88%, 23% 94%, 21% 78%, 5% 75%, 12% 60%, 0% 50%, 12% 40%, 5% 25%, 21% 22%, 23% 6%, 39% 12%);
 }
 
+@utility hero-stage {
+  background-image: radial-gradient(circle at center, color-mix(in oklab, var(--lime) 18%, transparent), transparent 38%);
+}
+
+@utility hero-paths {
+  background-image:
+    linear-gradient(90deg, transparent 49.7%, color-mix(in oklab, var(--foreground) 25%, transparent) 49.7%, color-mix(in oklab, var(--foreground) 25%, transparent) 50.3%, transparent 50.3%),
+    linear-gradient(transparent 49.7%, color-mix(in oklab, var(--foreground) 25%, transparent) 49.7%, color-mix(in oklab, var(--foreground) 25%, transparent) 50.3%, transparent 50.3%);
+  background-size: 20px 1px, 1px 20px;
+  background-repeat: repeat-x, repeat-y;
+  background-position: center, center;
+  animation: dash-flow 1.8s linear infinite;
+  opacity: 0.55;
+}
+
+@utility hero-highlight {
+  box-decoration-break: clone;
+  background: var(--lime);
+  box-shadow: 0.16em 0 0 var(--lime), -0.16em 0 0 var(--lime);
+}
+
+@utility hero-node {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  animation: node-float 5s ease-in-out infinite;
+
+  &:hover .hero-avatar { transform: scale(1.12) rotate(6deg); }
+  &:hover .hero-label { background: var(--foreground); color: var(--primary-foreground); }
+}
+
+@utility hero-node-one { left: 2%; top: 15%; }
+@utility hero-node-two { right: 2%; top: 18%; animation-delay: -1.3s; }
+@utility hero-node-three { left: 7%; bottom: 13%; animation-delay: -2.4s; }
+@utility hero-node-four { right: 5%; bottom: 10%; animation-delay: -3.6s; }
+
+@utility hero-avatar {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--foreground);
+  border-radius: 9999px;
+  background: var(--coral);
+  color: var(--coral-foreground);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: transform 200ms ease;
+}
+
+@utility hero-label {
+  border: 1px solid var(--foreground);
+  border-radius: 9999px;
+  background: var(--background);
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  transition: color 200ms ease, background 200ms ease;
+}
+
+@utility footer-link {
+  position: relative;
+  padding-bottom: 0.15rem;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: var(--blue);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease;
+  }
+
+  &:hover::after { transform: scaleX(1); transform-origin: left; }
+}
+
+@media (max-width: 767px) {
+  .hero-node { display: none; }
+  .hero-paths { opacity: 0.3; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .ticker-track, .drift-mark { animation: none; }
+  .ticker-track, .drift-mark, .hero-node, .hero-paths { animation: none; }
 }
