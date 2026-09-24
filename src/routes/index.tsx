@@ -283,8 +283,8 @@ function Index() {
                 <p className="max-w-lg text-lg font-bold leading-snug sm:text-xl">
                   Turning research into clear content, active communities and useful conversations.
                 </p>
-                <p className="mt-8 break-words text-[clamp(3.2rem,8vw,7rem)] font-extrabold uppercase leading-[0.82]">
-                  let's connect<span className="text-coral">.</span>
+                <p className="mt-8 text-[clamp(2.2rem,4.5vw,3.6rem)] font-extrabold uppercase leading-[0.9]">
+                  Let's connect<span className="text-coral">.</span>
                 </p>
               </div>
               <div className="flex items-end justify-between gap-6 md:flex-col md:items-end">
