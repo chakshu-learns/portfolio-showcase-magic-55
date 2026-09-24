@@ -3,6 +3,7 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   Download,
+  Linkedin,
   Mail,
   MoveRight,
 } from "lucide-react";
@@ -228,20 +229,39 @@ function Index() {
         </div>
       </section>
 
-      <footer id="contact" className="bg-coral py-20 text-coral-foreground lg:py-28">
-        <div className="mx-auto max-w-7xl px-5 lg:px-10">
-          <p className="font-mono text-xs uppercase">05 / Let’s build something useful</p>
-          <h2 className="mt-8 max-w-5xl text-5xl font-extrabold leading-[0.95] sm:text-8xl">Ready to start with a small task and let the work speak.</h2>
-          <div className="mt-14 flex flex-col gap-3 sm:flex-row">
-            <a href="mailto:parthsharma12898@gmail.com" className="group inline-flex items-center justify-between gap-8 border border-coral-foreground bg-coral-foreground px-5 py-4 font-mono text-sm uppercase text-coral transition-transform hover:-translate-y-1">
-              <span className="inline-flex items-center gap-3"><Mail className="size-4" /> Email me</span><ArrowUpRight className="size-4" />
+      <footer id="contact" className="bg-secondary px-4 py-16 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border-4 border-card bg-card shadow-sm">
+          <div className="footer-grid relative bg-coral px-6 pb-24 pt-16 sm:pt-20">
+            <span className="absolute left-4 top-6 hidden -rotate-6 border-2 border-foreground bg-lime px-4 py-2 font-mono text-xs font-medium uppercase leading-tight text-lime-foreground shadow-[3px_3px_0_var(--foreground)] sm:left-10 sm:top-16 sm:block">
+              Open to<br /><span className="text-base font-bold normal-case italic">new work</span>
+            </span>
+            <span className="starburst absolute right-4 top-6 hidden size-28 items-center justify-center bg-foreground text-center text-lg font-extrabold italic leading-none text-primary-foreground sm:right-10 sm:top-14 sm:flex">
+              Let’s<br />talk!
+            </span>
+            <a
+              href="mailto:parthsharma12898@gmail.com"
+              className="relative mx-auto flex max-w-md items-center justify-center rounded-full border-4 border-foreground bg-lime px-10 py-8 text-3xl font-extrabold italic text-lime-foreground shadow-[0_10px_0_var(--foreground)] transition-all hover:translate-y-1 hover:shadow-[0_5px_0_var(--foreground)] sm:text-5xl"
+            >
+              <span className="underline decoration-4 underline-offset-8">Email me</span>
             </a>
-            <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-between gap-8 border border-coral-foreground px-5 py-4 font-mono text-sm uppercase transition-transform hover:-translate-y-1">
-              LinkedIn <ArrowUpRight className="size-4" />
-            </a>
+            <svg className="absolute inset-x-0 bottom-0 h-8 w-full text-card" viewBox="0 0 1200 32" preserveAspectRatio="none" aria-hidden>
+              <path fill="currentColor" d="M0 16 Q25 0 50 16 T100 16 T150 16 T200 16 T250 16 T300 16 T350 16 T400 16 T450 16 T500 16 T550 16 T600 16 T650 16 T700 16 T750 16 T800 16 T850 16 T900 16 T950 16 T1000 16 T1050 16 T1100 16 T1150 16 T1200 16 V32 H0 Z" />
+            </svg>
           </div>
-          <div className="mt-20 flex flex-wrap justify-between gap-3 border-t border-coral-foreground/40 pt-5 font-mono text-xs uppercase">
-            <span>Parth Sharma © 2026</span><span>Creator • Content • Community</span>
+          <div className="px-6 pb-10 pt-8 sm:px-10">
+            <p className="ml-auto max-w-lg text-lg font-bold leading-snug sm:text-xl">
+              Ready to start with a small task and let the work speak — from research and writing to community and outreach.
+            </p>
+            <div className="mt-12 flex flex-wrap items-end justify-between gap-6">
+              <p className="text-[clamp(3.5rem,11vw,8rem)] font-extrabold leading-[0.8] tracking-tight">parth<span className="text-coral">.</span></p>
+              <div className="flex items-center gap-5">
+                <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-coral"><Linkedin className="size-7" /></a>
+                <a href="mailto:parthsharma12898@gmail.com" aria-label="Email" className="transition-colors hover:text-coral"><Mail className="size-7" /></a>
+              </div>
+            </div>
+            <div className="mt-8 flex flex-wrap justify-between gap-3 border-t border-border pt-4 font-mono text-xs uppercase text-muted-foreground">
+              <span>Parth Sharma © 2026</span><span>Creator • Content • Community</span>
+            </div>
           </div>
         </div>
       </footer>
