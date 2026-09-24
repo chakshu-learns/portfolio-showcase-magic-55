@@ -21,6 +21,7 @@
 @theme inline {
   --font-sans: "Manrope", sans-serif;
   --font-serif: "DM Serif Display", serif;
+  --font-script: "Yellowtail", cursive;
   --font-mono: "DM Mono", monospace;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -200,10 +201,18 @@
 
 @utility footer-grid {
   background-image:
-    linear-gradient(var(--foreground) 2px, transparent 2px),
-    linear-gradient(90deg, var(--foreground) 2px, transparent 2px);
-  background-size: 110px 110px;
+    linear-gradient(color-mix(in oklab, var(--foreground) 72%, transparent) 2px, transparent 2px),
+    linear-gradient(90deg, color-mix(in oklab, var(--foreground) 72%, transparent) 2px, transparent 2px);
+  background-size: 64px 64px;
   background-position: -2px -2px;
+}
+
+@utility footer-sticker {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+
+  &:hover {
+    transform: rotate(0deg) translateY(-4px);
+  }
 }
 
 @utility starburst {
@@ -303,4 +312,5 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .ticker-track, .drift-mark, .hero-node, .hero-paths { animation: none; }
+  .footer-sticker { transition: none; }
 }
