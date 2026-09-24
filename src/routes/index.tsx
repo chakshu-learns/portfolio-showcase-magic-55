@@ -190,7 +190,7 @@ function Index() {
       </section>
 
       <section id="experience" className="px-4 sm:px-8">
-        <div className="pop-lg mx-auto max-w-7xl rounded-3xl bg-foreground px-5 py-20 text-primary-foreground lg:px-12 lg:py-24">
+        <div style={{ boxShadow: "8px 8px 0 var(--coral)" }} className="pop-lg mx-auto max-w-7xl rounded-3xl bg-foreground px-5 py-20 text-primary-foreground lg:px-12 lg:py-24">
           <div className="mb-14 flex items-end justify-between border-b border-primary-foreground/30 pb-6">
             <div>
               <p className="font-mono text-xs uppercase text-lime">02 / Experience</p>
