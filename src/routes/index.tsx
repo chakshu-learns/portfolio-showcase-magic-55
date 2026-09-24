@@ -121,13 +121,13 @@ function Index() {
         </div>
       </nav>
 
-      <header id="top" className="hero-stage relative mx-auto flex min-h-[82svh] max-w-7xl flex-col justify-between overflow-hidden px-5 pb-12 pt-8 lg:px-10 lg:pb-14">
+      <header id="top" className="hero-stage relative mx-auto flex max-w-7xl flex-col justify-between overflow-hidden px-5 pb-10 pt-6 md:min-h-[82svh] md:pt-8 lg:px-10 lg:pb-14">
         <div className="flex items-start justify-between font-mono text-xs uppercase text-muted-foreground">
           <span>Creator-side operator</span>
           <span className="text-right">Based in India<br />Open to remote</span>
         </div>
 
-        <div className="relative flex min-h-[34rem] items-center justify-center py-20 sm:min-h-[38rem]">
+        <div className="relative flex items-center justify-center py-12 md:min-h-[38rem] md:py-20">
           <div className="hero-paths pointer-events-none absolute inset-0" aria-hidden="true" />
           {orbitRoles.map((item) => (
             <a key={item.label} href="#support" className={item.className} aria-label={`Explore ${item.label}`}>
@@ -138,7 +138,7 @@ function Index() {
 
           <div className="relative z-10 max-w-3xl text-center">
             <p className="mb-5 font-mono text-xs font-medium uppercase text-coral">Parth Sharma · Content & Community</p>
-            <h1 className="text-[clamp(3rem,7vw,6.7rem)] font-extrabold leading-[1.08]">
+            <h1 className="text-[clamp(2.6rem,11vw,6.7rem)] font-extrabold leading-[1.08]">
               <span className="block">Content.</span>
               <span className="block">Community.</span>
               <span className="mt-3 block sm:mt-4"><span className="hero-highlight">Growth.</span></span>
@@ -146,11 +146,11 @@ function Index() {
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
               I help creators and growing teams turn ideas into clear content, active communities and consistent output.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href="#experience" className="pop group inline-flex items-center gap-3 rounded-full bg-coral px-6 py-3 text-sm font-bold text-coral-foreground">
+            <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+              <a href="#experience" className="pop group inline-flex items-center justify-center gap-3 rounded-full bg-coral px-6 py-3 text-sm font-bold text-coral-foreground">
                 Explore my work <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="mailto:parthsharma12898@gmail.com" className="pop inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-bold hover:bg-lime">
+              <a href="mailto:parthsharma12898@gmail.com" className="pop inline-flex items-center justify-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-bold hover:bg-lime">
                 Let’s collaborate
               </a>
             </div>
@@ -177,16 +177,16 @@ function Index() {
         </div>
       </div>
 
-      <section id="profile" className="mx-auto grid max-w-7xl gap-12 px-5 py-24 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-32">
+      <section id="profile" className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:gap-12 sm:py-24 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-32">
         <div>
           <p className="font-mono text-xs uppercase text-coral">01 / Profile</p>
-          <h2 className="mt-5 text-5xl font-bold leading-none sm:text-7xl">Practical by default.</h2>
+          <h2 className="mt-5 text-4xl font-bold leading-none sm:text-7xl">Practical by default.</h2>
         </div>
         <div className="lg:pt-16">
-          <p className="text-2xl font-medium leading-snug sm:text-4xl">
+          <p className="text-xl font-medium leading-snug sm:text-4xl">
             A B.Tech Computer Science graduate working at the intersection of content, social media, community, research and business development.
           </p>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <div className="mt-8 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4">
             {["Startup experience", "Technical fluency", "Audience-first writing", "Fast, hands-on learning"].map((item) => (
               <div key={item} className="pop rounded-xl bg-card p-5 font-mono text-sm uppercase hover:bg-lime">{item}</div>
             ))}
@@ -195,18 +195,18 @@ function Index() {
       </section>
 
       <section id="experience" className="px-4 sm:px-8">
-        <div style={{ boxShadow: "8px 8px 0 var(--coral)" }} className="pop-lg mx-auto max-w-7xl rounded-3xl bg-foreground px-5 py-20 text-primary-foreground lg:px-12 lg:py-24">
-          <div className="mb-14 flex items-end justify-between border-b border-primary-foreground/30 pb-6">
+        <div style={{ boxShadow: "8px 8px 0 var(--coral)" }} className="pop-lg mx-auto max-w-7xl rounded-3xl bg-foreground px-5 py-12 sm:py-20 text-primary-foreground lg:px-12 lg:py-24">
+          <div className="mb-8 flex sm:mb-14 items-end justify-between border-b border-primary-foreground/30 pb-6">
             <div>
               <p className="font-mono text-xs uppercase text-lime">02 / Experience</p>
-              <h2 className="mt-4 text-5xl font-bold sm:text-7xl">Where I’ve built.</h2>
+              <h2 className="mt-4 text-4xl font-bold sm:text-7xl">Where I’ve built.</h2>
             </div>
             <span className="hidden font-mono text-xs uppercase text-primary-foreground/60 sm:block">Select a role to expand</span>
           </div>
           <div>
             {roles.map((item, index) => (
               <details key={item.company} className="group border-b border-primary-foreground/25 py-1" open={index === 0}>
-                <summary className="grid cursor-pointer list-none items-center gap-3 py-6 sm:grid-cols-[3rem_1fr_1fr_auto]">
+                <summary className="grid cursor-pointer list-none items-center gap-1.5 py-5 sm:gap-3 sm:py-6 sm:grid-cols-[3rem_1fr_1fr_auto]">
                   <span className="font-mono text-xs text-lime">0{index + 1}</span>
                   <strong className="text-2xl font-semibold sm:text-3xl">{item.company}</strong>
                   <span className="text-sm text-primary-foreground/70">{item.role}</span>
@@ -223,17 +223,17 @@ function Index() {
         </div>
       </section>
 
-      <section id="support" className="mx-auto max-w-7xl px-5 py-24 lg:px-10 lg:py-32">
-        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
+      <section id="support" className="mx-auto max-w-7xl px-5 py-16 sm:py-24 lg:px-10 lg:py-32">
+        <div className="grid gap-8 sm:gap-10 lg:grid-cols-[0.7fr_1.3fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="font-mono text-xs uppercase text-coral">03 / How I can help</p>
-            <h2 className="mt-5 text-5xl font-bold leading-none sm:text-7xl">From idea to audience.</h2>
+            <h2 className="mt-5 text-4xl font-bold leading-none sm:text-7xl">From idea to audience.</h2>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
             {services.map(([number, title, copy]) => (
-              <article key={number} className="pop group min-h-64 rounded-2xl bg-card p-6 hover:bg-lime">
+              <article key={number} className="pop group rounded-2xl bg-card p-5 sm:min-h-64 sm:p-6 hover:bg-lime">
                 <span className="inline-flex size-9 items-center justify-center rounded-full border-2 border-foreground bg-coral font-mono text-xs text-coral-foreground">{number}</span>
-                <h3 className="mt-14 text-3xl font-bold">{title}</h3>
+                <h3 className="mt-6 text-2xl font-bold sm:mt-14 sm:text-3xl">{title}</h3>
                 <p className="mt-4 leading-relaxed text-muted-foreground group-hover:text-lime-foreground">{copy}</p>
               </article>
             ))}
@@ -242,14 +242,14 @@ function Index() {
       </section>
 
       <section className="px-4 pb-8 sm:px-8">
-        <div className="pop-lg mx-auto grid max-w-7xl gap-12 rounded-3xl bg-lime px-5 py-20 text-lime-foreground lg:grid-cols-[0.65fr_1.35fr] lg:px-12 lg:py-24">
+        <div className="pop-lg mx-auto grid max-w-7xl gap-8 rounded-3xl bg-lime px-5 py-12 sm:gap-12 sm:py-20 text-lime-foreground lg:grid-cols-[0.65fr_1.35fr] lg:px-12 lg:py-24">
           <div>
             <p className="font-mono text-xs uppercase">04 / Spec work</p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">A demonstration concept — not client work — showing how I approach short-form content research.</p>
           </div>
           <div>
             <p className="font-mono text-xs uppercase">Topic / Starting a career in 2026</p>
-            <blockquote className="mt-6 text-4xl font-bold leading-tight sm:text-6xl">
+            <blockquote className="mt-5 text-2xl font-bold leading-tight sm:text-6xl">
               “If I had to restart my career from zero today, these are the 3 things I’d focus on first.”
             </blockquote>
             <div className="mt-12 grid gap-8 border-t-2 border-lime-foreground pt-8 sm:grid-cols-2">
@@ -260,20 +260,20 @@ function Index() {
         </div>
       </section>
 
-      <footer id="contact" className="px-4 py-14 sm:px-8 lg:py-20">
+      <footer id="contact" className="px-4 py-12 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-6xl overflow-hidden pop-lg rounded-3xl bg-background">
-          <div className="footer-grid relative flex h-72 items-center justify-center overflow-hidden bg-coral sm:h-80">
-            <div className="footer-sticker absolute left-4 top-7 -rotate-12 pop rounded-xl bg-lime p-3 text-lime-foreground sm:left-16 sm:top-16">
+          <div className="footer-grid relative flex h-80 items-center justify-center overflow-hidden bg-coral px-4">
+            <div className="footer-sticker absolute left-4 top-5 -rotate-12 pop rounded-xl bg-lime p-2 sm:p-3 text-lime-foreground sm:left-16 sm:top-16">
               <p className="border-b border-foreground pb-1 font-mono text-[10px] font-bold uppercase">Available</p>
-              <p className="text-xl font-extrabold italic leading-none">For new work</p>
+              <p className="text-base font-extrabold italic leading-none sm:text-xl">For new work</p>
             </div>
 
-            <a href="mailto:parthsharma12898@gmail.com" className="group relative z-10 mt-10 rounded-full border-[3px] border-foreground bg-lime px-8 py-5 text-center text-lime-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
-              <span className="text-4xl font-extrabold italic leading-tight sm:text-5xl">Let’s work together</span>
-              <span className="mt-2 block font-mono text-xs font-medium">parthsharma12898@gmail.com · 8872286699</span>
+            <a href="mailto:parthsharma12898@gmail.com" className="group relative z-10 rounded-full border-[3px] border-foreground bg-lime px-6 py-4 text-center text-lime-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
+              <span className="block text-2xl font-extrabold italic leading-tight sm:text-5xl">Let’s work together</span>
+              <span className="mt-2 block break-all font-mono text-[10px] font-medium sm:text-xs">parthsharma12898@gmail.com · 8872286699</span>
             </a>
 
-            <div className="starburst footer-sticker absolute bottom-5 right-3 flex size-24 rotate-12 items-center justify-center bg-foreground text-center font-mono text-sm font-bold uppercase text-lime sm:right-16 sm:top-14 sm:size-28">
+            <div className="starburst footer-sticker absolute bottom-8 right-3 flex size-20 text-xs sm:text-sm rotate-12 items-center justify-center bg-foreground text-center font-mono font-bold uppercase text-lime sm:right-16 sm:top-14 sm:size-28">
               Let’s<br />build!
             </div>
 
@@ -282,14 +282,14 @@ function Index() {
             </svg>
           </div>
 
-          <div className="bg-background p-7 sm:p-12">
+          <div className="bg-background p-5 sm:p-12">
             <div className="grid items-end gap-10 md:grid-cols-[minmax(0,1fr)_auto]">
               <div className="min-w-0">
                 <div className="flex max-w-xl items-center gap-4">
-                  <span className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-foreground bg-lime">
+                  <span className="flex size-12 shrink-0 sm:size-16 items-center justify-center overflow-hidden rounded-full border-2 border-foreground bg-lime">
                     <img src={parthCharacter} alt="" className="mt-3 size-20 object-cover" />
                   </span>
-                  <p className="text-lg font-bold leading-snug sm:text-xl">
+                  <p className="text-base font-bold leading-snug sm:text-xl">
                     Turning research into clear content, active communities and useful conversations.
                   </p>
                 </div>

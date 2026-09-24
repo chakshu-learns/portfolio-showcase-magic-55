@@ -76,7 +76,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "color-scheme", content: "only light" },
+      { name: "supported-color-schemes", content: "light" },
+      { name: "theme-color", content: "#f6f2e6" },
         { name: "author", content: "Parth Sharma" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
