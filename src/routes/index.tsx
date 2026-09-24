@@ -100,24 +100,25 @@ function Index() {
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <nav className="sticky top-0 z-50 border-b-2 border-foreground bg-background/95 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-10">
+          <a href="#top" className="flex items-center gap-2 text-xl font-extrabold">
+            <span className="flex size-9 items-center justify-center overflow-hidden rounded-full border-2 border-foreground bg-lime">
+              <img src={parthCharacter} alt="" className="mt-2 size-10 object-cover" />
+            </span>
+            <span>parth<span className="text-coral">.</span></span>
+          </a>
           <div className="hidden items-center gap-7 font-mono text-xs uppercase md:flex">
             <a href="#profile" className="transition-colors hover:text-coral">Profile</a>
             <a href="#experience" className="transition-colors hover:text-coral">Experience</a>
             <a href="#support" className="transition-colors hover:text-coral">Support</a>
             <a href="#contact" className="transition-colors hover:text-coral">Contact</a>
           </div>
-          <div className="flex items-center gap-3">
-            <a href="#top" aria-label="Back to top" className="flex size-9 items-center justify-center overflow-hidden rounded-full border-2 border-foreground bg-lime">
-              <img src={parthCharacter} alt="" className="mt-2 size-10 object-cover" />
-            </a>
-            <a
-              href="tel:+918872286699"
-              aria-label="Call Parth Sharma at 8872286699"
-              className="pop inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 font-mono text-xs font-medium text-lime-foreground"
-            >
-              <Phone className="size-3.5" /> 8872286699
-            </a>
-          </div>
+          <a
+            href="tel:+918872286699"
+            aria-label="Call Parth Sharma at 8872286699"
+            className="pop inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 font-mono text-xs font-medium text-lime-foreground"
+          >
+            <Phone className="size-3.5" /> 8872286699
+          </a>
         </div>
       </nav>
 
@@ -137,6 +138,9 @@ function Index() {
           ))}
 
           <div className="relative z-10 max-w-3xl text-center">
+            <div className="pop-lg mx-auto mb-5 flex size-24 items-center justify-center overflow-hidden rounded-full bg-lime sm:size-28">
+              <img src={parthCharacter} alt="Illustrated portrait of Parth Sharma" className="mt-5 size-28 object-cover sm:size-32" />
+            </div>
             <p className="mb-5 font-mono text-xs font-medium uppercase text-coral">Parth Sharma · Content & Community</p>
             <h1 className="text-[clamp(3rem,7vw,6.7rem)] font-extrabold leading-[1.08]">
               <span className="block">Content.</span>
