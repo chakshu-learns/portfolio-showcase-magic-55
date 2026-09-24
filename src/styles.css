@@ -164,6 +164,10 @@
   }
 
   html {
+    color-scheme: only light;
+    forced-color-adjust: none;
+    -webkit-text-size-adjust: 100%;
+    background-color: var(--color-background);
     scroll-behavior: smooth;
   }
 
