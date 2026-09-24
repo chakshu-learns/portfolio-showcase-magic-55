@@ -284,7 +284,7 @@ function Index() {
                   Turning research into clear content, active communities and useful conversations.
                 </p>
                 <p className="mt-8 break-words text-[clamp(3.2rem,8vw,7rem)] font-extrabold uppercase leading-[0.82]">
-                  parth<span className="text-coral">.</span>sharma
+                  let's connect<span className="text-coral">.</span>
                 </p>
               </div>
               <div className="flex items-end justify-between gap-6 md:flex-col md:items-end">
