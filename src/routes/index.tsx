@@ -297,7 +297,7 @@ function Index() {
                   Let's connect<span className="text-coral">.</span>
                 </p>
               </div>
-              <div className="flex items-end justify-between gap-6 md:flex-col md:items-end">
+              <div className="flex flex-wrap items-end justify-between gap-4 md:flex-col md:items-end">
                 <div className="flex gap-3">
                   <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex size-12 items-center justify-center pop rounded-xl bg-background hover:bg-lime"><Linkedin className="size-5" /></a>
                   <a href="mailto:parthsharma12898@gmail.com" aria-label="Email Parth" className="flex size-12 items-center justify-center pop rounded-xl bg-background hover:bg-lime"><Mail className="size-5" /></a>
