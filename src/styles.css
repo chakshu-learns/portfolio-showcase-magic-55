@@ -73,7 +73,7 @@
 }
 
 :root {
-  --radius: 0.25rem;
+  --radius: 0.75rem;
   --background: oklch(0.965 0.018 91);
   --foreground: oklch(0.145 0.018 43);
   --card: oklch(0.985 0.01 91);
@@ -265,6 +265,7 @@
   justify-content: center;
   border: 2px solid var(--foreground);
   border-radius: 9999px;
+  box-shadow: 3px 3px 0 var(--foreground);
   background: var(--coral);
   color: var(--coral-foreground);
   font-family: var(--font-mono);
@@ -274,9 +275,10 @@
 }
 
 @utility hero-label {
-  border: 1px solid var(--foreground);
+  border: 2px solid var(--foreground);
   border-radius: 9999px;
-  background: var(--background);
+  background: var(--lime);
+  color: var(--lime-foreground);
   padding: 0.35rem 0.65rem;
   font-family: var(--font-mono);
   font-size: 0.65rem;
@@ -295,7 +297,7 @@
     left: 0;
     height: 1px;
     content: "";
-    background: var(--blue);
+    background: var(--coral);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 200ms ease;
@@ -313,4 +315,21 @@
   html { scroll-behavior: auto; }
   .ticker-track, .drift-mark, .hero-node, .hero-paths { animation: none; }
   .footer-sticker { transition: none; }
+}
+
+/* Shared "pop" element language — used across nav, hero, cards and footer */
+@utility pop {
+  border: 2px solid var(--foreground);
+  box-shadow: 4px 4px 0 var(--foreground);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--foreground);
+  }
+}
+
+@utility pop-lg {
+  border: 3px solid var(--foreground);
+  box-shadow: 8px 8px 0 var(--foreground);
 }

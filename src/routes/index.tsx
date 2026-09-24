@@ -97,9 +97,9 @@ const orbitRoles = [
 function Index() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
+      <nav className="sticky top-0 z-50 border-b-2 border-foreground bg-background/95 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-10">
-          <a href="#top" className="font-mono text-sm font-medium uppercase">PS / 26</a>
+          <a href="#top" className="text-xl font-extrabold">parth<span className="text-coral">.</span></a>
           <div className="hidden items-center gap-7 font-mono text-xs uppercase md:flex">
             <a href="#profile" className="transition-colors hover:text-coral">Profile</a>
             <a href="#experience" className="transition-colors hover:text-coral">Experience</a>
@@ -109,7 +109,7 @@ function Index() {
           <a
             href="tel:+918872286699"
             aria-label="Call Parth Sharma at 8872286699"
-            className="inline-flex items-center gap-2 border border-foreground bg-foreground px-3 py-2 font-mono text-xs text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="pop inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 font-mono text-xs font-medium text-lime-foreground"
           >
             <Phone className="size-3.5" /> 8872286699
           </a>
@@ -142,25 +142,25 @@ function Index() {
               I help creators and growing teams turn ideas into clear content, active communities and consistent output.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href="#experience" className="group inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-1">
+              <a href="#experience" className="pop group inline-flex items-center gap-3 rounded-full bg-coral px-6 py-3 text-sm font-bold text-coral-foreground">
                 Explore my work <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="mailto:parthsharma12898@gmail.com" className="inline-flex items-center gap-2 rounded-full border border-foreground bg-background px-6 py-3 text-sm font-semibold transition-colors hover:bg-lime">
+              <a href="mailto:parthsharma12898@gmail.com" className="pop inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-bold hover:bg-lime">
                 Let’s collaborate
               </a>
             </div>
           </div>
         </div>
 
-        <div className="flex items-end justify-between border-t border-foreground pt-5">
+        <div className="flex items-end justify-between border-t-2 border-foreground pt-5">
           <p className="font-mono text-xs uppercase">Scroll to meet the work</p>
-          <a href="#profile" aria-label="Explore portfolio" className="group flex size-12 items-center justify-center rounded-full border border-foreground transition-colors hover:bg-lime">
+          <a href="#profile" aria-label="Explore portfolio" className="pop group flex size-12 items-center justify-center rounded-full bg-background hover:bg-lime">
             <ArrowDownRight className="size-5 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
           </a>
         </div>
       </header>
 
-      <div className="overflow-hidden border-y border-foreground bg-coral py-3 text-coral-foreground">
+      <div className="overflow-hidden border-y-2 border-foreground bg-coral py-3 text-coral-foreground">
         <div className="ticker-track flex w-max gap-10 font-mono text-sm uppercase">
           {[0, 1].map((group) => (
             <div key={group} className="flex gap-10" aria-hidden={group === 1}>
@@ -181,16 +181,16 @@ function Index() {
           <p className="text-2xl font-medium leading-snug sm:text-4xl">
             A B.Tech Computer Science graduate working at the intersection of content, social media, community, research and business development.
           </p>
-          <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {["Startup experience", "Technical fluency", "Audience-first writing", "Fast, hands-on learning"].map((item) => (
-              <div key={item} className="bg-background p-5 font-mono text-sm uppercase">{item}</div>
+              <div key={item} className="pop rounded-xl bg-card p-5 font-mono text-sm uppercase hover:bg-lime">{item}</div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="experience" className="bg-foreground py-24 text-primary-foreground lg:py-32">
-        <div className="mx-auto max-w-7xl px-5 lg:px-10">
+      <section id="experience" className="px-4 sm:px-8">
+        <div style={{ boxShadow: "8px 8px 0 var(--coral)" }} className="pop-lg mx-auto max-w-7xl rounded-3xl bg-foreground px-5 py-20 text-primary-foreground lg:px-12 lg:py-24">
           <div className="mb-14 flex items-end justify-between border-b border-primary-foreground/30 pb-6">
             <div>
               <p className="font-mono text-xs uppercase text-lime">02 / Experience</p>
@@ -224,10 +224,10 @@ function Index() {
             <p className="font-mono text-xs uppercase text-coral">03 / How I can help</p>
             <h2 className="mt-5 text-5xl font-bold leading-none sm:text-7xl">From idea to audience.</h2>
           </div>
-          <div className="grid gap-px border border-foreground bg-foreground sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {services.map(([number, title, copy]) => (
-              <article key={number} className="group min-h-64 bg-background p-6 transition-colors hover:bg-lime">
-                <span className="font-mono text-xs text-muted-foreground group-hover:text-lime-foreground">{number}</span>
+              <article key={number} className="pop group min-h-64 rounded-2xl bg-card p-6 hover:bg-lime">
+                <span className="inline-flex size-9 items-center justify-center rounded-full border-2 border-foreground bg-coral font-mono text-xs text-coral-foreground">{number}</span>
                 <h3 className="mt-14 text-3xl font-bold">{title}</h3>
                 <p className="mt-4 leading-relaxed text-muted-foreground group-hover:text-lime-foreground">{copy}</p>
               </article>
@@ -236,8 +236,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="border-y border-foreground bg-lime py-24 text-lime-foreground lg:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.65fr_1.35fr] lg:px-10">
+      <section className="px-4 pb-8 sm:px-8">
+        <div className="pop-lg mx-auto grid max-w-7xl gap-12 rounded-3xl bg-lime px-5 py-20 text-lime-foreground lg:grid-cols-[0.65fr_1.35fr] lg:px-12 lg:py-24">
           <div>
             <p className="font-mono text-xs uppercase">04 / Spec work</p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">A demonstration concept — not client work — showing how I approach short-form content research.</p>
@@ -247,7 +247,7 @@ function Index() {
             <blockquote className="mt-6 text-4xl font-bold leading-tight sm:text-6xl">
               “If I had to restart my career from zero today, these are the 3 things I’d focus on first.”
             </blockquote>
-            <div className="mt-12 grid gap-8 border-t border-lime-foreground pt-8 sm:grid-cols-2">
+            <div className="mt-12 grid gap-8 border-t-2 border-lime-foreground pt-8 sm:grid-cols-2">
               <div><p className="font-mono text-xs uppercase">The angle</p><p className="mt-3 text-lg">One skill. One proof-of-work project. One consistent outreach system.</p></div>
               <div><p className="font-mono text-xs uppercase">The follow-ups</p><p className="mt-3 text-lg">Skills to learn first • Proof of work with no experience • A weekly job-search system</p></div>
             </div>
@@ -255,20 +255,20 @@ function Index() {
         </div>
       </section>
 
-      <footer id="contact" className="bg-secondary px-4 py-14 sm:px-8 lg:py-20">
-        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border-4 border-foreground bg-background shadow-[12px_12px_0_var(--foreground)]">
+      <footer id="contact" className="px-4 py-14 sm:px-8 lg:py-20">
+        <div className="mx-auto max-w-6xl overflow-hidden pop-lg rounded-3xl bg-background">
           <div className="footer-grid relative flex h-72 items-center justify-center overflow-hidden bg-coral sm:h-80">
-            <div className="footer-sticker absolute left-4 top-7 -rotate-12 border-2 border-foreground bg-lime p-3 text-lime-foreground shadow-[4px_4px_0_var(--foreground)] sm:left-16 sm:top-16">
+            <div className="footer-sticker absolute left-4 top-7 -rotate-12 pop rounded-xl bg-lime p-3 text-lime-foreground sm:left-16 sm:top-16">
               <p className="border-b border-foreground pb-1 font-mono text-[10px] font-bold uppercase">Available</p>
-              <p className="font-script text-2xl leading-none">For new work</p>
+              <p className="text-xl font-extrabold italic leading-none">For new work</p>
             </div>
 
-            <a href="tel:+918872286699" className="group relative z-10 mt-10 rounded-full border-4 border-foreground bg-butter px-8 py-5 text-center text-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
-              <span className="font-script text-4xl leading-tight underline decoration-[3px] underline-offset-8 sm:text-5xl">Call Parth</span>
+            <a href="tel:+918872286699" className="group relative z-10 mt-10 rounded-full border-[3px] border-foreground bg-lime px-8 py-5 text-center text-lime-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
+              <span className="text-4xl font-extrabold italic leading-tight sm:text-5xl">Call Parth</span>
               <span className="mt-2 block font-mono text-xs font-medium">8872286699</span>
             </a>
 
-            <div className="starburst footer-sticker absolute bottom-5 right-3 flex size-24 rotate-12 items-center justify-center bg-blue text-center font-mono text-sm font-bold uppercase text-primary-foreground sm:right-16 sm:top-14 sm:size-28">
+            <div className="starburst footer-sticker absolute bottom-5 right-3 flex size-24 rotate-12 items-center justify-center bg-foreground text-center font-mono text-sm font-bold uppercase text-lime sm:right-16 sm:top-14 sm:size-28">
               Let’s<br />build!
             </div>
 
@@ -289,9 +289,9 @@ function Index() {
               </div>
               <div className="flex items-end justify-between gap-6 md:flex-col md:items-end">
                 <div className="flex gap-3">
-                  <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex size-12 items-center justify-center rounded-lg border-2 border-foreground transition-colors hover:bg-foreground hover:text-primary-foreground"><Linkedin className="size-5" /></a>
-                  <a href="mailto:parthsharma12898@gmail.com" aria-label="Email Parth" className="flex size-12 items-center justify-center rounded-lg border-2 border-foreground transition-colors hover:bg-foreground hover:text-primary-foreground"><Mail className="size-5" /></a>
-                  <a href="tel:+918872286699" aria-label="Call Parth" className="flex size-12 items-center justify-center rounded-lg border-2 border-foreground transition-colors hover:bg-foreground hover:text-primary-foreground"><Phone className="size-5" /></a>
+                  <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex size-12 items-center justify-center pop rounded-xl bg-background hover:bg-lime"><Linkedin className="size-5" /></a>
+                  <a href="mailto:parthsharma12898@gmail.com" aria-label="Email Parth" className="flex size-12 items-center justify-center pop rounded-xl bg-background hover:bg-lime"><Mail className="size-5" /></a>
+                  <a href="tel:+918872286699" aria-label="Call Parth" className="flex size-12 items-center justify-center pop rounded-xl bg-background hover:bg-lime"><Phone className="size-5" /></a>
                 </div>
                 <p className="font-mono text-[10px] font-bold uppercase sm:text-xs">Parth Sharma © 2026</p>
               </div>
