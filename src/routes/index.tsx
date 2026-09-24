@@ -2,14 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowDownRight,
   ArrowRight,
-  ArrowUpRight,
-  Download,
   Linkedin,
   Mail,
   MoveRight,
-  Send,
+  Phone,
 } from "lucide-react";
-import portfolioAsset from "../assets/parth-portfolio.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -110,11 +107,11 @@ function Index() {
             <a href="#contact" className="transition-colors hover:text-coral">Contact</a>
           </div>
           <a
-            href={portfolioAsset.url}
-            download
-            className="inline-flex items-center gap-2 border border-foreground bg-foreground px-3 py-2 font-mono text-xs uppercase text-primary-foreground transition-transform hover:-translate-y-0.5"
+            href="tel:+918872286699"
+            aria-label="Call Parth Sharma at 8872286699"
+            className="inline-flex items-center gap-2 border border-foreground bg-foreground px-3 py-2 font-mono text-xs text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-            <Download className="size-3.5" /> PDF
+            <Phone className="size-3.5" /> 8872286699
           </a>
         </div>
       </nav>
@@ -136,9 +133,10 @@ function Index() {
 
           <div className="relative z-10 max-w-3xl text-center">
             <p className="mb-5 font-mono text-xs font-medium uppercase text-coral">Content • Community • Outreach</p>
-            <h1 className="text-[clamp(3rem,7vw,6.7rem)] font-extrabold leading-[0.98]">
-              Research. Shape.<br />
-              <span className="hero-highlight">Build with Parth.</span>
+            <h1 className="text-[clamp(3rem,7vw,6.7rem)] font-extrabold leading-[1.08]">
+              <span className="block">Research.</span>
+              <span className="block">Shape.</span>
+              <span className="mt-3 block sm:mt-4"><span className="hero-highlight">Build with Parth.</span></span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
               I help creators and growing teams turn ideas into clear content, active communities and consistent output.
@@ -257,54 +255,46 @@ function Index() {
         </div>
       </section>
 
-      <footer id="contact" className="bg-butter text-blue">
-        <div className="border-b border-blue px-5 py-8 lg:px-10">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4">
-            <p className="flex items-center gap-3 text-xl font-bold sm:text-2xl"><Send className="size-6" /> Follow the work</p>
-            <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" className="group flex items-center gap-2 font-mono text-sm font-medium uppercase">
-              linkedin.com/in/parthsharma8 <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+      <footer id="contact" className="bg-secondary px-4 py-14 sm:px-8 lg:py-20">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border-4 border-foreground bg-background shadow-[12px_12px_0_var(--foreground)]">
+          <div className="footer-grid relative flex h-72 items-center justify-center overflow-hidden bg-coral sm:h-80">
+            <div className="footer-sticker absolute left-4 top-7 -rotate-12 border-2 border-foreground bg-lime p-3 text-lime-foreground shadow-[4px_4px_0_var(--foreground)] sm:left-16 sm:top-16">
+              <p className="border-b border-foreground pb-1 font-mono text-[10px] font-bold uppercase">Available</p>
+              <p className="font-script text-2xl leading-none">For new work</p>
+            </div>
+
+            <a href="tel:+918872286699" className="group relative z-10 mt-10 rounded-full border-4 border-foreground bg-butter px-8 py-5 text-center text-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
+              <span className="font-script text-4xl leading-tight underline decoration-[3px] underline-offset-8 sm:text-5xl">Call Parth</span>
+              <span className="mt-2 block font-mono text-xs font-medium">8872286699</span>
             </a>
-          </div>
-        </div>
 
-        <div className="mx-auto max-w-7xl px-5 pb-8 pt-12 lg:px-10 lg:pt-16">
-          <h2 className="font-serif text-[clamp(3.7rem,9vw,8.8rem)] leading-[0.88]">Thank you for<br className="sm:hidden" /> your curiosity.</h2>
+            <div className="starburst footer-sticker absolute bottom-5 right-3 flex size-24 rotate-12 items-center justify-center bg-blue text-center font-mono text-sm font-bold uppercase text-primary-foreground sm:right-16 sm:top-14 sm:size-28">
+              Let’s<br />build!
+            </div>
 
-          <div className="mt-14 grid gap-10 border-b border-blue pb-14 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.45fr]">
-            <div>
-              <div className="flex size-20 rotate-3 items-center justify-center rounded-[38%] bg-blue text-2xl font-extrabold text-butter transition-transform hover:-rotate-6">PS</div>
-              <p className="mt-5 max-w-xs text-sm leading-relaxed">Creator-side support for research, writing, social media, community and outreach.</p>
-            </div>
-            <div>
-              <p className="font-mono text-xs font-medium uppercase">Explore</p>
-              <div className="mt-4 flex flex-col items-start gap-3 text-sm">
-                <a href="#profile" className="footer-link">Profile</a>
-                <a href="#experience" className="footer-link">Experience</a>
-                <a href="#support" className="footer-link">How I can help</a>
-              </div>
-            </div>
-            <div>
-              <p className="font-mono text-xs font-medium uppercase">Work with me</p>
-              <div className="mt-4 flex flex-col items-start gap-3 text-sm">
-                <a href="mailto:parthsharma12898@gmail.com" className="footer-link">Email me</a>
-                <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" className="footer-link">LinkedIn</a>
-                <a href={portfolioAsset.url} download className="footer-link">Download portfolio</a>
-              </div>
-            </div>
-            <div>
-              <p className="font-mono text-xs font-medium uppercase">Let’s build something useful</p>
-              <p className="mt-4 max-w-sm text-sm leading-relaxed">Ready to start with a small task and let the work speak.</p>
-              <a href="mailto:parthsharma12898@gmail.com" className="group mt-6 flex items-center justify-between border border-blue px-4 py-3 text-sm font-medium transition-colors hover:bg-blue hover:text-butter">
-                Start a conversation <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
+            <svg className="absolute inset-x-0 bottom-0 h-10 w-full text-background" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+              <path fill="currentColor" d="M0 20 Q25 0 50 20 T100 20 T150 20 T200 20 T250 20 T300 20 T350 20 T400 20 T450 20 T500 20 T550 20 T600 20 T650 20 T700 20 T750 20 T800 20 T850 20 T900 20 T950 20 T1000 20 T1050 20 T1100 20 T1150 20 T1200 20 V40 H0 Z" />
+            </svg>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-5 font-mono text-xs uppercase">
-            <span>Parth Sharma © 2026</span>
-            <div className="flex items-center gap-4">
-              <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-1"><Linkedin className="size-5" /></a>
-              <a href="mailto:parthsharma12898@gmail.com" aria-label="Email" className="transition-transform hover:-translate-y-1"><Mail className="size-5" /></a>
+          <div className="bg-background p-7 sm:p-12">
+            <div className="grid items-end gap-10 md:grid-cols-[minmax(0,1fr)_auto]">
+              <div className="min-w-0">
+                <p className="max-w-lg text-lg font-bold leading-snug sm:text-xl">
+                  Turning research into clear content, active communities and useful conversations.
+                </p>
+                <p className="mt-8 break-words text-[clamp(3.2rem,8vw,7rem)] font-extrabold uppercase leading-[0.82]">
+                  parth<span className="text-coral">.</span>sharma
+                </p>
+              </div>
+              <div className="flex items-end justify-between gap-6 md:flex-col md:items-end">
+                <div className="flex gap-3">
+                  <a href="https://linkedin.com/in/parthsharma8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex size-12 items-center justify-center rounded-lg border-2 border-foreground transition-colors hover:bg-foreground hover:text-primary-foreground"><Linkedin className="size-5" /></a>
+                  <a href="mailto:parthsharma12898@gmail.com" aria-label="Email Parth" className="flex size-12 items-center justify-center rounded-lg border-2 border-foreground transition-colors hover:bg-foreground hover:text-primary-foreground"><Mail className="size-5" /></a>
+                  <a href="tel:+918872286699" aria-label="Call Parth" className="flex size-12 items-center justify-center rounded-lg border-2 border-foreground transition-colors hover:bg-foreground hover:text-primary-foreground"><Phone className="size-5" /></a>
+                </div>
+                <p className="font-mono text-[10px] font-bold uppercase sm:text-xs">Parth Sharma © 2026</p>
+              </div>
             </div>
           </div>
         </div>
