@@ -257,7 +257,7 @@ function Index() {
 
       <footer id="contact" className="px-4 py-14 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-6xl overflow-hidden pop-lg rounded-3xl bg-background">
-          <div className="footer-grid relative flex h-72 border-b-[3px] border-foreground items-center justify-center overflow-hidden bg-coral sm:h-80">
+          <div className="footer-grid relative flex h-72 items-center justify-center overflow-hidden bg-coral sm:h-80">
             <div className="footer-sticker absolute left-4 top-7 -rotate-12 pop rounded-xl bg-lime p-3 text-lime-foreground sm:left-16 sm:top-16">
               <p className="border-b border-foreground pb-1 font-mono text-[10px] font-bold uppercase">Available</p>
               <p className="text-xl font-extrabold italic leading-none">For new work</p>
