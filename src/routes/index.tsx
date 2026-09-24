@@ -263,9 +263,9 @@ function Index() {
               <p className="text-xl font-extrabold italic leading-none">For new work</p>
             </div>
 
-            <a href="tel:+918872286699" className="group relative z-10 mt-10 rounded-full border-[3px] border-foreground bg-lime px-8 py-5 text-center text-lime-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
-              <span className="text-4xl font-extrabold italic leading-tight sm:text-5xl">Call Parth</span>
-              <span className="mt-2 block font-mono text-xs font-medium">8872286699</span>
+            <a href="mailto:parthsharma12898@gmail.com" className="group relative z-10 mt-10 rounded-full border-[3px] border-foreground bg-lime px-8 py-5 text-center text-lime-foreground shadow-[8px_8px_0_var(--foreground)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none sm:mt-0 sm:px-14 sm:py-6">
+              <span className="text-4xl font-extrabold italic leading-tight sm:text-5xl">Let’s work together</span>
+              <span className="mt-2 block font-mono text-xs font-medium">parthsharma12898@gmail.com · 8872286699</span>
             </a>
 
             <div className="starburst footer-sticker absolute bottom-5 right-3 flex size-24 rotate-12 items-center justify-center bg-foreground text-center font-mono text-sm font-bold uppercase text-lime sm:right-16 sm:top-14 sm:size-28">
